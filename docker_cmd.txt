@@ -1,0 +1,111 @@
+Frequently used Docker commands:
+
+
+### Docker Basics ###
+
+1. **`docker --version`**:
+   - Check the installed Docker version.
+
+2. **`docker pull <image-name>`**:
+   - Download a Docker image from Docker Hub (e.g., `docker pull ubuntu`).
+
+3. **`docker images`**:
+   - List all Docker images on your local machine.
+
+4. **`docker ps`**:
+   - List all running Docker containers.
+
+5. **`docker ps -a`**:
+   - List all Docker containers, including stopped ones.
+
+6. **`docker run <image-name>`**:
+   - Run a new container from a specified image (e.g., `docker run ubuntu`).
+
+7. **`docker run -it <image-name> /bin/bash`**:
+   - Start a container interactively and open a bash shell.
+
+8. **`docker start <container-id>`**:
+   - Start a stopped container.
+
+9. **`docker stop <container-id>`**:
+   - Stop a running container.
+
+10. **`docker rm <container-id>`**:
+    - Remove a stopped container.
+
+11. **`docker rmi <image-id>`**:
+    - Remove a Docker image.
+
+----------------------------------------------------------------------------------------------------------
+
+### Docker Images and Containers ###
+
+1. **`docker build -t <tag-name> .`**:
+   - Build a Docker image from a Dockerfile in the current directory and tag it with a name (e.g., `docker build -t myapp .`).
+
+2. **`docker exec -it <container-id> /bin/bash`**:
+   - Access a running container and open an interactive bash shell.
+
+3. **`docker logs <container-id>`**:
+   - View the logs of a running container.
+
+4. **`docker inspect <container-id>`**:
+   - Display detailed information about a container.
+
+5. **`docker commit <container-id> <new-image-name>`**:
+   - Create a new image from a container’s changes.
+
+6. **`docker cp <container-id>:<path-inside-container> <path-on-host>`**:
+   - Copy files from a container to the host machine.
+
+-------------------------------------------------------------------------------------------------------------
+
+### Docker Networking ###
+
+1. **`docker network ls`**:
+   - List all Docker networks.
+
+2. **`docker network create <network-name>`**:
+   - Create a new Docker network.
+
+3. **`docker network connect <network-name> <container-id>`**:
+   - Connect a container to a specific network.
+
+4. **`docker network inspect <network-name>`**:
+   - Inspect details about a specific Docker network.
+
+--------------------------------------------------------------------------------------------------------------
+
+### Docker Volumes ###
+
+1. **`docker volume ls`**:
+   - List all Docker volumes.
+
+2. **`docker volume create <volume-name>`**:
+   - Create a new Docker volume.
+
+3. **`docker run -v <volume-name>:/path/in/container <image-name>`**:
+   - Mount a volume to a container at a specified path.
+
+4. **`docker volume rm <volume-name>`**:
+   - Remove a Docker volume.
+
+--------------------------------------------------------------------------------------------------------------
+
+### Docker Compose ###
+
+1. **`docker-compose up`**:
+   - Build, (re)create, start, and attach to containers for a service defined in a `docker-compose.yml` file.
+
+2. **`docker-compose down`**:
+   - Stop and remove containers, networks, images, and volumes created by `docker-compose up`.
+
+3. **`docker-compose build`**:
+   - Build or rebuild services defined in a `docker-compose.yml` file.
+
+4. **`docker-compose ps`**:
+   - List containers managed by Docker Compose.
+
+5. **`docker-compose logs`**:
+   - View output from services managed by Docker Compose.
+
